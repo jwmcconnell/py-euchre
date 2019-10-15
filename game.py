@@ -1,10 +1,10 @@
-from deck import Deck
+from table import Table
 
 class Game: 
 
   def __init__(self):
     self.game_menu()
-    self.deck = Deck()
+    self.table = Table()
 
   def game_menu(self):
     print("Hi! Thank you for starting a game of py-euchre")
