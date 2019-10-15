@@ -1,0 +1,2 @@
+# py-euchre
+python euchre
