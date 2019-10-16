@@ -7,7 +7,6 @@ class Deck:
     self.cards = []
     self.fill_deck()
     self.shuffle_deck()
-    self.print_deck()
 
   def fill_deck(self):
     suits = ["hearts", "diamonds", "clubs", "spades"]
