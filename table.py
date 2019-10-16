@@ -6,6 +6,7 @@ class Table:
   def __init__(self):
     self.players = self.setup_players()
     self.deck = Deck()
+    self.kitty = []
     self.deal_cards()
   
   def setup_players(self):
@@ -17,10 +18,12 @@ class Table:
     for player in self.players:
       player.hand.add_cards(self.deck.cards[i:i + 5])
       i += 5
-    end_deal = self.deck.cards[20:]
+    self.kitty = self.deck.cards[20:]
     self.display_table()
 
   def display_table(self):
     for player in self.players:
       player.display_player_info()
+    print("Top Card from Kitty:")
+    self.kitty[0].print_card()
   
