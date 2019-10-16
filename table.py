@@ -26,4 +26,3 @@ class Table:
       player.display_player_info()
     print("Top Card from Kitty:")
     self.kitty[0].print_card()
-  

@@ -19,5 +19,4 @@ class Hand:
         print("Hand:", end="\n")
         for i, card in enumerate(self.cards):
             print(i, ": ", sep="", end="")
-            card.print_card()
         print("")
