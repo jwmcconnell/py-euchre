@@ -6,11 +6,18 @@ class Table:
   def __init__(self):
     self.players = self.setup_players()
     self.deck = Deck()
-    self.kitty = []
+    self.kitty = [] # left over cards after dealing
+    self.dealer = 0 
+    self.leader = 1
     self.deal_cards()
   
   def setup_players(self):
     return [Player(x) for x in range(4)]
+
+  def order_table(self):
+    # returns the players in the correct order to play a card or pick trump
+    order_table = self.players[self.leader:] + self.players[:self.leader]
+    return order_table
 
   def deal_cards(self):
     self.deck.shuffle_deck()
